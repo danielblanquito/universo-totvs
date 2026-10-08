@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -141,6 +140,72 @@
   .star-row .lv { font-weight: 600; color: var(--c-text); font-size: 12px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
   .star-row.mkt { background: var(--c-bg); }
   @media (max-width: 640px) { .star-row { grid-template-columns: 82px minmax(0, 1fr); } .star-row .ds { grid-column: 1 / -1; } }
+  .camp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  @media (max-width: 760px) { .camp-grid { grid-template-columns: minmax(0, 1fr); } }
+  .camp-grid { align-items: stretch; }
+  .camp { border: 1px solid var(--c-border-md); border-radius: var(--radius-md); background: var(--c-surface); padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .camp .big { font-size: 26px; font-weight: 600; letter-spacing: -0.8px; line-height: 1; color: var(--amber-txt); font-variant-numeric: tabular-nums; }
+  .camp .big small { font-size: 13px; font-weight: 500; letter-spacing: -0.2px; margin-left: 4px; }
+  .camp .what { font-size: 13px; font-weight: 600; letter-spacing: -0.2px; }
+  .camp .cond { font-size: 11.5px; color: var(--c-text-2); line-height: 1.5; }
+  .camp .prods { display: flex; flex-direction: column; gap: 5px; border-top: 1px solid var(--c-border); padding-top: 8px; margin-top: auto; }
+  .camp .prod { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 11.5px; }
+  .camp .prod b { font-weight: 600; margin-right: 2px; }
+  .pitch { margin-top: 4px; font-size: 11.5px; line-height: 1.5; color: var(--teal-txt); background: var(--teal-bg); border-radius: 8px; padding: 6px 9px; }
+  .pitch b { font-weight: 600; }
+  .camp.lexos { border-color: var(--purple-bdr); }
+  .camp.lexos .big { color: var(--purple-txt); }
+  .camp ul.benefits { list-style: none; display: grid; gap: 6px; }
+  .camp ul.benefits li { font-size: 12px; line-height: 1.45; padding-left: 16px; position: relative; color: var(--c-text); }
+  .camp ul.benefits li::before { content: ''; position: absolute; left: 2px; top: 6px; width: 7px; height: 7px; border-radius: 99px; background: var(--purple-bdr); }
+  .rules { display: flex; flex-direction: column; border: 1px solid var(--c-border); border-radius: var(--radius-md); overflow: hidden; }
+  .rule-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; padding: 7px 11px; font-size: 12px; background: var(--c-surface); }
+  .rule-row + .rule-row { border-top: 1px solid var(--c-border); }
+  .rule-row .if { color: var(--c-text); min-width: 0; flex: 1 1 140px; }
+  .rule-row .if small { display: block; font-size: 11px; color: var(--c-text-2); }
+  .helper-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; }
+  @media (max-width: 860px) { .helper-grid { grid-template-columns: minmax(0, 1fr); } }
+  .hsec { display: flex; flex-direction: column; gap: 5px; }
+  .envs { display: flex; flex-direction: column; border: 1px solid var(--c-border); border-radius: var(--radius-md); overflow: hidden; }
+  .env { padding: 7px 11px; background: var(--c-surface); display: grid; gap: 1px; font-size: 12px; min-width: 0; }
+  .env + .env { border-top: 1px solid var(--c-border); }
+  .env b { font-weight: 600; }
+  .env a { color: var(--blue-txt); font-size: 11px; font-family: var(--font-mono); overflow-wrap: anywhere; text-decoration: none; }
+  .env a:hover, .env a:focus-visible { text-decoration: underline; }
+  .env .cred { font-size: 11px; color: var(--c-text-2); font-family: var(--font-mono); overflow-wrap: anywhere; }
+  .env .pend { font-size: 10.5px; color: var(--amber-txt); font-weight: 500; }
+  .hlist { padding-left: 16px; display: grid; gap: 3px; font-size: 11.5px; color: var(--c-text-2); line-height: 1.5; }
+  .hlist b { color: var(--c-text); font-weight: 600; }
+  .pend-box { border-radius: var(--radius-md); padding: 8px 11px; font-size: 11.5px; line-height: 1.5; background: var(--amber-bg); color: var(--amber-txt); border: 1px solid var(--amber-bdr); }
+  .ok-box { border-radius: var(--radius-md); padding: 8px 11px; font-size: 11.5px; background: var(--green-bg); color: var(--green-txt); border: 1px solid var(--green-bdr); }
+  .ops-hdr { background: var(--c-text); color: var(--c-surface); border-bottom-color: var(--c-text); }
+  .ops { width: 100%; border-collapse: collapse; font-size: 11.5px; color: var(--c-text-2); line-height: 1.5; }
+  .ops th { text-align: left; font-family: var(--font-mono); font-size: 9.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--c-text-3); padding: 8px 12px; border-bottom: 1px solid var(--c-border); background: var(--c-bg); }
+  .ops td { padding: 10px 12px; vertical-align: top; border-bottom: 1px solid var(--c-border); }
+  .ops tr:last-child td { border-bottom: none; }
+  .ops .stand { width: 150px; }
+  .ops .stand b { display: block; font-size: 12.5px; color: var(--c-text); font-weight: 600; }
+  .ops .stand span { font-family: var(--font-mono); font-size: 10.5px; color: var(--c-text-3); }
+  .ops .stand i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 1px; }
+  .ops .env-l { display: grid; gap: 5px; }
+  .ops .env-l div { min-width: 0; }
+  .ops .env-l b { color: var(--c-text); font-weight: 600; }
+  .ops .env-l a { color: var(--blue-txt); text-decoration: none; overflow-wrap: anywhere; }
+  .ops .env-l a:hover, .ops .env-l a:focus-visible { text-decoration: underline; }
+  .ops .env-l small { display: block; font-family: var(--font-mono); font-size: 10.5px; color: var(--c-text-3); overflow-wrap: anywhere; }
+  .ops .env-l .pend { color: var(--amber-txt); font-family: var(--font); font-weight: 500; }
+  .ops ul { padding-left: 14px; display: grid; gap: 3px; }
+  .ops ul b { color: var(--c-text); font-weight: 600; }
+  .ops-wrap { overflow-x: auto; }
+  @media (max-width: 760px) {
+    .ops thead { display: none; }
+    .ops, .ops tbody, .ops tr, .ops td { display: block; width: 100%; }
+    .ops tr { border-bottom: 1px solid var(--c-border); }
+    .ops tr:last-child { border-bottom: none; }
+    .ops td { border-bottom: none; padding: 6px 12px; }
+    .ops td.stand { padding-top: 12px; width: 100%; }
+    .ops td[data-l]::before { content: attr(data-l); display: block; font-family: var(--font-mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--c-text-3); margin-bottom: 3px; }
+  }
   .people { display: flex; flex-direction: column; border: 1px solid var(--c-border); border-radius: var(--radius-md); overflow: hidden; }
   .person { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; padding: 7px 11px; font-size: 12px; background: var(--c-surface); }
   .person + .person { border-top: 1px solid var(--c-border); }
@@ -190,6 +255,7 @@
             <li>Precificação dinâmica por perfil de cliente e canal</li>
             <li>Catálogo por canal e perfil, com preço, disponibilidade e quantidade em grade aberta</li>
           </ul></div>
+          <div class="pitch"><b>Argumento de venda:</b> integração com Microvix sem custo, por tempo ilimitado.</div>
         </div>
 
         <div class="complemento-divider"><span>Complemento · quando fizer sentido</span></div>
@@ -239,6 +305,7 @@
           <span class="badge badge-blue">E-Commerce B2C</span>
           <div class="pname">Linx Commerce</div>
           <div class="pdesc">Começar com baixo custo de implementação e operação, compatível com o momento do cliente.</div>
+          <div class="pitch"><b>Argumento de venda:</b> integração com Microvix sem custo, por tempo ilimitado.</div>
         </div>
 
         <div class="sub-label mt6">Supermercados</div>
@@ -310,11 +377,18 @@
           <span class="badge badge-blue">ERP Linx</span>
           <div class="pname">Plugg.To</div>
           <div class="pdesc">Integração nativa com ERPs Linx. Destaques: Multi Lojas para franquias e redes, e Deliveries (iFood, Rappi, 99).</div>
+          <div class="pitch"><b>Argumento de venda:</b> integração com Microvix sem custo, por tempo ilimitado.</div>
         </div>
 
         <div class="sub-label mt6">ERP de mercado</div>
         <div class="note">
           <b>Validar aderência:</b> avaliar com o cliente qual dos dois hubs se encaixa melhor na operação dele.
+        </div>
+
+        <div class="sub-label mt6">Necessidades específicas</div>
+        <div class="rules">
+          <div class="rule-row"><span class="if">Expedição automatizada com faturador próprio do Hub</span><span class="badge badge-purple">Lexos</span></div>
+          <div class="rule-row"><span class="if">Integrações com marketplaces disponíveis exclusivamente na Plugg.To</span><span class="badge badge-blue">Plugg.To</span></div>
         </div>
 
         <div class="complemento-divider"><span>Apresentadores</span></div>
@@ -330,7 +404,86 @@
 
   </div>
 
+  <div class="section-sep"><span>Campanhas do evento</span></div>
+
+  <div class="bottom-block">
+    <div class="bottom-hdr" style="background:var(--amber-bg);color:var(--amber-txt);border-bottom-color:var(--amber-bdr);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+      Condições especiais Universo TOTVS
+      <span class="hint">Válidas no evento</span>
+    </div>
+    <div class="bottom-body">
+      <div class="camp-grid">
+        <div class="camp">
+          <div class="big">50%<small>off</small></div>
+          <div class="what">No setup</div>
+          <div class="cond">Desconto de 50% na taxa de setup dos planos participantes. Na Lexos, vale para todos os planos.</div>
+          <div class="prods">
+            <div class="prod"><b>Linx Commerce</b><span class="badge badge-blue">FAST</span><span class="badge badge-blue">FULL</span><span class="badge badge-blue">OMNI</span></div>
+            <div class="prod"><b>MercadApp</b><span class="badge badge-amber">APP</span><span class="badge badge-amber">SITE</span><span class="badge badge-amber">APP + SITE</span></div>
+            <div class="prod"><b>Plugg.To</b><span class="badge badge-purple">BASIC</span><span class="badge badge-purple">PRO</span></div>
+            <div class="prod"><b>Lexos</b><span class="badge badge-purple">Todos os planos</span></div>
+          </div>
+        </div>
+        <div class="camp">
+          <div class="big">2<small>meses</small></div>
+          <div class="what">Mensalidade isenta</div>
+          <div class="cond">2 meses de isenção de mensalidade, seguindo o cupom padrão do Universo.</div>
+          <div class="prods">
+            <div class="prod"><b>Linx Commerce</b><span class="badge badge-blue">FAST</span><span class="badge badge-blue">FULL</span><span class="badge badge-blue">OMNI</span></div>
+            <div class="prod"><b>MercadApp</b><span class="badge badge-amber">APP</span><span class="badge badge-amber">SITE</span><span class="badge badge-amber">APP + SITE</span></div>
+            <div class="prod"><b>Plugg.To</b><span class="badge badge-purple">BASIC</span><span class="badge badge-purple">PRO</span></div>
+            <div class="prod"><b>Lexos</b><span class="badge badge-purple">Todos os planos</span></div>
+          </div>
+        </div>
+        <div class="camp">
+          <div class="big">100%<small>isenta</small></div>
+          <div class="what">Integração com Winthor</div>
+          <div class="cond">Isenção da cobrança de integração com o Winthor.</div>
+          <div class="prods">
+            <div class="prod"><b>Lexos</b><span class="badge badge-purple">Todos os planos</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="section-sep"><span>Informações auxiliares</span></div>
+
+  <div class="bottom-block">
+    <div class="bottom-hdr ops-hdr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path></svg>
+      Helper operacional
+      <span class="hint">Ambientes, demos e escala</span>
+    </div>
+    <div class="ops-wrap">
+      <table class="ops">
+        <thead><tr><th>Estande</th><th>Ambientes</th><th>Jornadas de demonstração</th><th>Escala</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="stand"><b><i style="background:var(--blue-bdr)"></i>B2B e OMS</b><span>Posição 39</span></td>
+            <td data-l="Ambientes"><div class="env-l"><div><a href="https://totvscommerce.core.dcg.com.br/b2b" target="_blank" rel="noopener">Linx Commerce B2B</a></div><div><b>OMS InStore</b><small>uni.totvs · empresa comercialomni · senha: combinar com o time</small></div><div><a href="https://cockpit.linxoms.com.br/control-tower" target="_blank" rel="noopener">OMS Cockpit</a><small>uni.totvs · empresa comercialomni · senha: combinar com o time</small></div><div><a href="https://docs.google.com/presentation/d/1Inm-4Cm0cqjUd85T0Vgyhr3gY-kGALNq/edit?slide=id.p2#slide=id.p2" target="_blank" rel="noopener">PPT comercial do OMS</a><small>pode ser mostrado no tablet</small></div></div></td>
+            <td data-l="Jornadas de demonstração"><ul><li>Linx Commerce B2B.</li><li>InStore e Cockpit do OMS.</li><li>Commerce e OMS <b>de forma apartada</b>, sem jornada integrada.</li></ul></td>
+            <td data-l="Escala">Todos full, intercalando almoço e saídas para palestras conforme a demanda.</td>
+          </tr>
+          <tr>
+            <td class="stand"><b><i style="background:var(--green-bdr)"></i>B2C e OMS</b><span>Posição 56</span></td>
+            <td data-l="Ambientes"><div class="env-l"><div><a href="https://totvscommerce.core.dcg.com.br/b2c" target="_blank" rel="noopener">Linx Commerce B2C</a></div><div><a href="https://totvsbp.myshopify.com/" target="_blank" rel="noopener">Shopify B2C</a><small>senha: combinar com o time</small></div><div><b>OMS InStore</b><small>uni.totvs · empresa comercialomni · senha: combinar com o time</small></div><div><a href="https://cockpit.linxoms.com.br/control-tower" target="_blank" rel="noopener">OMS Cockpit</a><small>uni.totvs · empresa comercialomni · senha: combinar com o time</small></div><div><a href="https://comercialomni.core.dcg.com.br/" target="_blank" rel="noopener">OMS no Commerce</a></div><div><a href="https://quickstart-89c119ff.myshopify.com/" target="_blank" rel="noopener">OMS no Shopify</a><small class="pend">Usuário pendente</small></div><div><a href="https://docs.google.com/presentation/d/1Inm-4Cm0cqjUd85T0Vgyhr3gY-kGALNq/edit?slide=id.p2#slide=id.p2" target="_blank" rel="noopener">PPT comercial do OMS</a></div><div><a href="https://drive.google.com/file/d/1DSzLm1I9qaO37SS9vLIPyoNyur3rVo1y/view?usp=drivesdk" target="_blank" rel="noopener">MercadApp</a><small>via tablet ou celular</small></div></div></td>
+            <td data-l="Jornadas de demonstração"><ul><li><b>Shopify:</b> Felipe Varejão, no ambiente dele.</li><li><b>Linx Commerce B2C:</b> Pamela, Renato e/ou Marina.</li><li><b>Linx OMS:</b> Pamela, Renato e/ou Marina.</li><li><b>MercadApp:</b> tablet ou celular, por Pamela, Renato e/ou Marina.</li></ul></td>
+            <td data-l="Escala">Todos full, intercalando almoço e saídas para palestras conforme a demanda.</td>
+          </tr>
+          <tr>
+            <td class="stand"><b><i style="background:var(--purple-bdr)"></i>Hub de Marketplaces</b><span>Posição 75</span></td>
+            <td data-l="Ambientes"><div class="env-l"><div><a href="https://app-hub.lexos.com.br/" target="_blank" rel="noopener">Lexos</a></div><div><a href="https://painel.plugg.to/" target="_blank" rel="noopener">Plugg.To</a></div></div></td>
+            <td data-l="Jornadas de demonstração"><ul><li>Lexos e Plugg.To conforme o cenário do cliente.</li></ul></td>
+            <td data-l="Escala">Camila, Aline e Breno se revezando no ponto conforme a demanda.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="height:10px"></div>
 
   <div class="bottom-block">
     <div class="bottom-hdr">
@@ -540,5 +693,3 @@
 
 </body>
 </html>
-
-</body></html>
